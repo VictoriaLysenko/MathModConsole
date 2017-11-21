@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Methods\Method1.cs" />
+    <Compile Include="IMethod.cs" />
+    <Compile Include="Methods\EulerMethod.cs" />
     <Compile Include="Methods\Method2.cs" />
     <Compile Include="Methods\Method3.cs" />
     <Compile Include="Methods\Method4.cs" />

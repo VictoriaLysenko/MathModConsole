@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathModCosole.Methods
 {
-    class Method1
+    public class EulerMethod
     {
     }
 }
