@@ -11,7 +11,7 @@ namespace MathModCosole
     {
         static void Main(string[] args)
         {
-            EulerMethod euler = new EulerMethod(1, 2, 0.5);
+            EulerMethod euler = new EulerMethod(1, 3, 10, 1);
 
             Console.ReadLine();
         }

@@ -20,8 +20,19 @@ namespace MathModCosole
             set;
         }
 
-        double StartValue(double t);
+        double Tau
+        {
+            get;
+            set;
+        }
 
+
+        int N
+        {
+            get;
+            set;
+        }
+        
         double Function(double t);
     }
 }
