@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="IMethod.cs" />
     <Compile Include="Methods\EulerMethod.cs" />
-    <Compile Include="Methods\Method2.cs" />
+    <Compile Include="Methods\RK4.cs" />
     <Compile Include="Methods\Method3.cs" />
     <Compile Include="Methods\Method4.cs" />
     <Compile Include="Program.cs" />

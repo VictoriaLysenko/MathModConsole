@@ -63,7 +63,7 @@ namespace MathModCosole.Methods
 
         public double Function(double t)
         {
-            return 6 * (t - 1);
+            return 6 * (t);
         }
 
         public static double StartValue(double t)
@@ -83,24 +83,32 @@ namespace MathModCosole.Methods
 
             fi[0] = StartValue(start);
 
-            for (int i = 0; i < m; i++)
+            int l = 0;
+            for (double i = start - tau; i < start; i += step)
+            {
+                x[0, l] = StartValue(i);
+                Console.WriteLine("{0} = {1} ", i, x[0, l++]);
+            }
+
+            for (int i = 1; i < m; i++)
             {
                 int k = 0;
-                x[i, 0] = fi[i];
+                x[i, 0] = fi[i - 1];
 
                 for (double j = start; j < end; j += step)
                 {
-                    x[i + 1, k++] = x[i, k] + step * f(fi[i]);
-                    Console.Write("{0}, ", x[i + 1, k-1]);
+                    x[i, k + 1] = x[i, k] + step * f(fi[i]);
+                    fi[i] = StartValue(j);
+                    Console.WriteLine("{0} = {1} ", j, x[i, k]);
+                    k++;
                 }
-
-                Console.WriteLine();
-                fi[i + 1] = x[i + 1, n - 1];
+                
+                fi[i] = x[i, n - 1];
                 start += tau;
                 end += tau;
             }
 
-            return fi[m];
+            return fi[m - 1];
         }
     }
 }
